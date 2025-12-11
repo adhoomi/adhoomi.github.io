@@ -4068,6 +4068,10 @@ input, select, textarea {
 					color: inherit;
 				}
 
+	#footer h2 .no-transform {
+		text-transform: none;
+	}
+
 	@media screen and (max-width: 1280px) {
 
 		#footer {
