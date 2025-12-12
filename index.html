@@ -9,11 +9,42 @@
 		<title>My Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css?v=3" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+		<!-- Inline override to force cyan accent immediately -->
+		<style>
+		:root { --site-accent: #00C8FF; }
+		/* Buttons and primary elements */
+		.button.primary, button.primary,
+		input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary {
+			background-color: var(--site-accent) !important;
+		}
+		.button.primary:hover, button.primary:hover,
+		input[type="submit"].primary:hover, input[type="reset"].primary:hover, input[type="button"].primary:hover {
+			background-color: #00D4FF !important;
+		}
+		.button.primary:active, button.primary:active,
+		input[type="submit"].primary:active, input[type="reset"].primary:active, input[type="button"].primary:active {
+			background-color: #0099CC !important;
+		}
 
+		/* Menu and spotlight */
+		#menu, .wrapper.spotlight { background-color: var(--site-accent) !important; }
+		.wrapper.spotlight:before, .wrapper.spotlight:after {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2300C8FF%3B' /%3E%3C/svg%3E") !important;
+			box-shadow: inset 0 -1px 0 0 #00C8FF, 0 1px 0 0 #00C8FF !important;
+		}
+
+		/* Inputs focus/borders */
+		input[type="checkbox"]:focus + label:before,
+		input[type="radio"]:focus + label:before { border-color: var(--site-accent) !important; }
+
+		/* Pagination active */
+		ul.pagination li > .page.active { background-color: var(--site-accent) !important; }
+		/* Force page background to requested light blue */
+		body { background-color: #6495ED !important; background-image: none !important; background-size: auto !important; background-position: center !important; outline: none !important; }
+		/* debug */
+		</style>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
