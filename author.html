@@ -11,6 +11,65 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css?v=2" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Inline override for author page -->
+		<style>
+		:root { --site-accent: #00C8FF; }
+		/* Buttons and primary elements */
+		.button.primary, button.primary,
+		input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary {
+			background-color: var(--site-accent) !important;
+		}
+		.button.primary:hover, button.primary:hover,
+		input[type="submit"].primary:hover, input[type="reset"].primary:hover, input[type="button"].primary:hover {
+			background-color: #00D4FF !important;
+		}
+		.button.primary:active, button.primary:active,
+		input[type="submit"].primary:active, input[type="reset"].primary:active, input[type="button"].primary:active {
+			background-color: #0099CC !important;
+		}
+
+		/* Menu and spotlight */
+		.wrapper.spotlight { background-color: var(--site-accent) !important; }
+		.wrapper.spotlight:before, .wrapper.spotlight:after {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2300C8FF%3B' /%3E%3C/svg%3E") !important;
+			box-shadow: inset 0 -1px 0 0 #00C8FF, 0 1px 0 0 #00C8FF !important;
+		}
+
+		/* Inputs focus/borders */
+		input[type="checkbox"]:focus + label:before,
+		input[type="radio"]:focus + label:before { border-color: var(--site-accent) !important; }
+
+		/* Pagination active */
+		ul.pagination li > .page.active { background-color: var(--site-accent) !important; }
+		/* Force page background to requested cream */
+		body { background-color: #FBF4EA !important; background-image: none !important; background-size: auto !important; background-position: center !important; outline: none !important; }
+		/* Override wrapper background to dark gray */
+		.wrapper {
+			background-color: #2A2A2A !important;
+		}
+		.wrapper:before, .wrapper:after {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232A2A2A%3B' /%3E%3C/svg%3E") !important;
+			box-shadow: inset 0 -1px 0 0 #2A2A2A, 0 1px 0 0 #2A2A2A !important;
+		}
+		/* Override banner and footer backgrounds */
+		#banner, #footer {
+			background-color: #2A2A2A !important;
+			background-image: linear-gradient(to top, rgba(42, 42, 42, 0.8), rgba(42, 42, 42, 0.8)), url("../../images/bg.jpg") !important;
+		}
+		/* Header inside wrapper should be transparent or match main bg */
+		#wrapper > header {
+			background-color: transparent !important;
+			background-image: none !important;
+		}
+		/* Make header text black for visibility */
+		#wrapper > header .inner h2, #wrapper > header .inner p {
+			color: black !important;
+		}
+		/* Make the line between title and subtitle black */
+		#wrapper > header .inner h2 {
+			border-color: black !important;
+		}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -62,18 +121,6 @@
 
 									<p>Beyond coding and engineering, I love exploring new technologies, learning about AI advancements, and staying updated on the latest trends in software development. In my free time, I enjoy reading tech blogs, experimenting with small coding projects, and collaborating with others who share my enthusiasm for innovation. I believe that continuous learning and hands-on experience are key to growing as a developer and engineer, and I’m excited to see where my skills will take me in the future.</p>									
 									<h3 class="major"></h3>
-
-									<h3 class="major">Preview</h3>
-									<div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start; margin-top:0.75rem;">
-										<figure style="flex:1; min-width:280px;">
-											<img src="images/library_web.png" alt="Library Web UI" style="width:100%; height:auto; border-radius:6px; box-shadow:0 6px 18px rgba(0,0,0,0.35); display:block;" />
-											<figcaption style="font-size:0.95rem; margin-top:0.5rem; color:var(--text);">Web interface — responsive library view</figcaption>
-										</figure>
-										<figure style="flex:1; min-width:280px;">
-											<img src="images/library_gui.png" alt="Library Desktop GUI" style="width:100%; height:auto; border-radius:6px; box-shadow:0 6px 18px rgba(0,0,0,0.35); display:block;" />
-											<figcaption style="font-size:0.95rem; margin-top:0.5rem; color:var(--text);">Desktop GUI — Tkinter client</figcaption>
-										</figure>
-									</div>
 
 								</div>
 							</div>
